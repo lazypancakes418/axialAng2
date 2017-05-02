@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core'
 
 @Injectable()
 
-export class ProjectService {
+export class ProjectsService {
   getProjects(): Promise<Project[]> {
     return Promise.resolve(PROJECTS);
   }
