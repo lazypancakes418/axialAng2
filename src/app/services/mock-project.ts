@@ -1,4 +1,4 @@
-import { Project } from './project'
+import { Project } from './project';
 
 export let PROJECTS: Project[] = [
   {
@@ -76,23 +76,23 @@ export let PROJECTS: Project[] = [
 ];
 
 
-export const DELETE =  (index: number): void  => {
+export const DELETE =  (index: number): Project[]  => {
   let data: Project[] = [...PROJECTS];
   data = [...data.slice(0, index), ...data.slice(index + 1)];
   PROJECTS = data;
-  return PROJECTS
+  return PROJECTS;
 }
 
-export const ADD = (proj: Project): void => {
+export const ADD = (proj: Project): Project[] => {
   let data: Project[] = [...PROJECTS];
   data = [proj, ...data];
   PROJECTS = data;
-  return PROJECTS
+  return PROJECTS;
 }
 
-export const EDIT = (index: number, proj: Project): void => {
+export const EDIT = (index: number, proj: Project): Project[] => {
   let data: Project[] = [...PROJECTS];
   data = [...data.slice(0, index), proj, ...data.slice(index + 1)];
   PROJECTS = data;
-  return PROJECTS
+  return PROJECTS;
 }

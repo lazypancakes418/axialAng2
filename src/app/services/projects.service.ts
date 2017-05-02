@@ -10,14 +10,14 @@ export class ProjectsService {
   }
 
   deleteProject(index: number): Promise<Project[]> {
-    return Promise.resolve(DELETE(index))
+    return Promise.resolve(DELETE(index));
   }
 
   addProject(proj: Project): Promise<Project[]> {
-    return Promise.resolve(ADD(proj))
+    return Promise.resolve(ADD(proj));
   }
 
   editProject(index: number, proj: Project): Promise<Project[]> {
-    return Promise.resolve(EDIT(index, proj))
+    return Promise.resolve(EDIT(index, proj));
   }
 }

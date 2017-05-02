@@ -10,9 +10,11 @@ import { ProjectsService } from './services/projects.service';
     BrowserModule,
     FormsModule,
   ],
-  declarations: [],
+  declarations: [
+    AppComponent
+  ],
   providers: [ProjectsService],
-  bootstrap: []
+  bootstrap: [AppComponent]
 })
 
 export class AppModule {}
