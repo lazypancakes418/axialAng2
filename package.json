@@ -1,0 +1,49 @@
+{
+  "name": "axial-ang-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjmohammad/axialAng2.git"
+  },
+  "author": "RJ Mohammad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rjmohammad/axialAng2/issues"
+  },
+  "homepage": "https://github.com/rjmohammad/axialAng2#readme",
+  "dependencies": {
+    "@angular/common": "~4.1.0",
+    "@angular/compiler": "~4.1.0",
+    "@angular/core": "~4.1.0",
+    "@angular/forms": "~4.1.0",
+    "@angular/http": "~4.1.0",
+    "@angular/platform-browser": "^4.1.0",
+    "@angular/platform-browser-dynamic": "^4.1.0",
+    "@angular/router": "~4.1.0",
+    "awesome-typescript-loader": "^3.1.3",
+    "core-js": "^2.4.1",
+    "html-loader": "^0.4.5",
+    "rxjs": "5.3.0",
+    "style-loader": "^0.17.0",
+    "zone": "^0.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.15",
+    "angular2-template-loader": "^0.6.2",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.28.0",
+    "null-loader": "^0.1.1",
+    "raw-loader": "^0.5.1",
+    "typescript": "~2.3.2",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5",
+    "webpack-merge": "^4.1.0"
+  }
+}
