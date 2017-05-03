@@ -15,7 +15,7 @@ module.exports = {
     extensions: ['.ts', '.js']
   },
   devtool: 'cheap-module-eval-source-map',
-
+   devtool: '#eval-source-map',
   output: {
     path: helpers.root('dist'),
     publicPath: 'http://localhost:8080/',
@@ -48,7 +48,8 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader?sourceMap' })
+        loaders: 'style-loader!css-loader',
+        include: [/node_modules/]
       },
       {
         test: /\.css$/,

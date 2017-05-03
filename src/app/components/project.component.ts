@@ -5,7 +5,8 @@ import { ProjectsService } from '../services/projects.service';
 
 @Component({
   selector: 'axial-projects',
-  templateUrl: '../templates/project.component.html'
+  templateUrl: '../templates/project.component.html',
+  styleUrls: ['../styles/project.component.css']
 })
 
 
