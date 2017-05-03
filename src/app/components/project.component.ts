@@ -8,6 +8,7 @@ import { ProjectsService } from '../services/projects.service';
   templateUrl: '../templates/project.component.html'
 })
 
+
 export class ProjectsComponent implements OnInit {
   projects: Project[];
 
@@ -16,10 +17,11 @@ export class ProjectsComponent implements OnInit {
   ) { }
 
   getProjects() : void {
+    console.log('getting')
     this.projService.getProjects().then(projs => this.projects = projs);
   }
 
   ngOnInit() : void {
-    this.getProjects
+    this.getProjects()
   }
 }
