@@ -16,8 +16,7 @@ import { ProjectsService } from './services/projects.service';
     ProjectsComponent
   ],
   providers: [ProjectsService],
-  bootstrap: [AppComponent,
-    ProjectsComponent]
+  bootstrap: [AppComponent]
 })
 
 export class AppModule {}
