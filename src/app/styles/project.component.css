@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+}
+.card {
+  width: 255px;
+  height: 85%
+}
+.tile{
+  height: 255px
+}
