@@ -24,4 +24,8 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() : void {
     this.getProjects();
   }
+
+  deleteProject(index : number) : void {
+    this.projService.deleteProject(index).then(projs => this.projects = projs)
+  }
 }

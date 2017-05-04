@@ -1,6 +1,6 @@
 <button md-raised-button >Click me!</button>
 <md-grid-list cols="6">
-  <md-grid-tile colspan="2" rowspan="2" *ngFor="let proj of projects">
+  <md-grid-tile colspan="2" rowspan="2" *ngFor="let proj of projects; let i = index">
     <md-card class="card" >
   <md-card-header>
     <md-card-title>{{proj.headline}}</md-card-title>
@@ -15,7 +15,7 @@
   </md-card-content>
   <md-card-actions>
     <button md-raised-button color="primary">Edit</button>
-    <button md-raised-button color="warn">Delete</button>
+    <button md-raised-button (click)="deleteProject(i)" color="warn">Delete</button>
   </md-card-actions>
 </md-card>
   </md-grid-tile>
