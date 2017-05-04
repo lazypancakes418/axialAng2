@@ -3,7 +3,8 @@ import { MdDialog } from '@angular/material';
 
 import { Project } from '../services/project';
 import { ProjectsService } from '../services/projects.service';
-import { EditDialogComponent } from './edit-dialog.component'
+import { EditDialogComponent } from './edit-dialog.component';
+import { AddDialogComponent } from './add-dialog.component';
 
 @Component({
   selector: 'axial-projects',
@@ -33,5 +34,9 @@ export class ProjectsComponent implements OnInit {
   }
    openDialog() {
     let dialogRef = this.dialog.open(EditDialogComponent);
+  }
+
+   addDialog() {
+    let dialogRef = this.dialog.open(AddDialogComponent);
   }
 }

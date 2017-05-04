@@ -7,5 +7,6 @@ import {MdDialogRef} from '@angular/material';
 })
 
 export class EditDialogComponent {
+   some : string = "i am edit"
   constructor(public dialogRef: MdDialogRef<EditDialogComponent>) {}
 }
