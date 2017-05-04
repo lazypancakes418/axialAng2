@@ -3,12 +3,13 @@ import {
   MdButtonModule,
   MdGridListModule,
   MdCardModule,
-  MdDialogModule
+  MdDialogModule,
+  MdInputModule,
 } from '@angular/material';
 
 @NgModule({
-  imports: [MdButtonModule, MdGridListModule, MdCardModule, MdDialogModule],
-  exports: [MdButtonModule, MdGridListModule, MdCardModule, MdDialogModule]
+  imports: [MdButtonModule, MdGridListModule, MdCardModule, MdDialogModule, MdInputModule],
+  exports: [MdButtonModule, MdGridListModule, MdCardModule, MdDialogModule, MdInputModule]
 })
 
 export class MaterialModule { }

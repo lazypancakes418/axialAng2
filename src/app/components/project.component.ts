@@ -1,7 +1,9 @@
-import {Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MdDialog } from '@angular/material';
 
 import { Project } from '../services/project';
 import { ProjectsService } from '../services/projects.service';
+import { EditDialogComponent } from './edit-dialog.component'
 
 @Component({
   selector: 'axial-projects',
@@ -14,18 +16,22 @@ export class ProjectsComponent implements OnInit {
   projects: Project[];
 
   constructor(
-    private projService: ProjectsService
+    private projService: ProjectsService,
+    public dialog: MdDialog
   ) { }
 
-  getProjects() : void {
+  getProjects(): void {
     this.projService.getProjects().then(projs => this.projects = projs);
   }
 
-  ngOnInit() : void {
+  ngOnInit(): void {
     this.getProjects();
   }
 
-  deleteProject(index : number) : void {
+  deleteProject(index: number): void {
     this.projService.deleteProject(index).then(projs => this.projects = projs)
+  }
+   openDialog() {
+    let dialogRef = this.dialog.open(EditDialogComponent);
   }
 }
