@@ -1,41 +1,41 @@
-<md-toolbar color="warn">
-    <span>Project Details</span>
-</md-toolbar>
 <md-card>
-<form>
-  <md-input-container class="headline">
-     <input mdInput placeholder="Headline" value="{{headline}}"/>
-  </md-input-container>
-  <div>
-    <md-input-container>
-      <input mdInput placeholder="Check Size Min" value="{{checkMin}}"/>
-    </md-input-container>
-    <md-input-container>
-      <input mdInput placeholder="Check Size Max" value="{{checkMax}}"/>
-    </md-input-container>
-  </div>
-  <div>
-    <md-input-container>
-      <input mdInput placeholder="Revenue Min" value="{{trMin}}"/>
-    </md-input-container>
-    <md-input-container>
-      <input mdInput placeholder="Revenue Max" value="{{trMax}}"/>
-    </md-input-container>
-  </div>
-  <div>
-    <md-input-container>
-      <input mdInput placeholder="EBITA Min" value="{{ebiMin}}"/>
-    </md-input-container>
-    <md-input-container>
-      <input mdInput placeholder="EBITA Max" value="{{ebiMax}}"/>
-    </md-input-container>
-  </div>
-</form>
+  <md-card-header>
+    <md-card-title>
+      <h2> Projects</h2>
+    </md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <form>
+      <md-input-container class="headline">
+        <input mdInput placeholder="Headline" value="{{headline}}" />
+      </md-input-container>
+      <div>
+        <md-input-container>
+          <input mdInput placeholder="Check Size Min" value="{{checkMin}}" />
+        </md-input-container>
+        <md-input-container>
+          <input mdInput placeholder="Check Size Max" value="{{checkMax}}" />
+        </md-input-container>
+      </div>
+      <div>
+        <md-input-container>
+          <input mdInput placeholder="Revenue Min" value="{{trMin}}" />
+        </md-input-container>
+        <md-input-container>
+          <input mdInput placeholder="Revenue Max" value="{{trMax}}" />
+        </md-input-container>
+      </div>
+      <div>
+        <md-input-container>
+          <input mdInput placeholder="EBITA Min" value="{{ebiMin}}" />
+        </md-input-container>
+        <md-input-container>
+          <input mdInput placeholder="EBITA Max" value="{{ebiMax}}" />
+        </md-input-container>
+      </div>
+    </form>
+  </md-card-content>
+  <md-card-actions>
+    <button md-raised-button (click)="openDialog(projects[i])" color="primary">Save</button>
+  </md-card-actions>
 </md-card>
-
- 
-  
- 
-  
-  
-  
