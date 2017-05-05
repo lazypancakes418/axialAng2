@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MdDialog, MdDialogRef } from '@angular/material';
 
 import { Project } from '../services/project';
@@ -20,7 +20,7 @@ export class ProjectsComponent implements OnInit {
 
   constructor(
     private projService: ProjectsService,
-    private formService: EditFormService,
+    // private formService: EditFormService,
     public dialog: MdDialog,
   ) { }
 
@@ -35,9 +35,23 @@ export class ProjectsComponent implements OnInit {
   deleteProject(index: number): void {
     this.projService.deleteProject(index).then(projs => this.projects = projs)
   }
-  openDialog() {
+  openDialog(proj: any) {
+    console.log(proj)
+    let { headline,
+      target_check_size_min,
+      target_check_size_max,
+      target_revenue_min,
+      target_revenue_max,
+      target_ebitda_min,
+      target_ebitda_max, } = proj
     let dialogRef = this.dialog.open(EditDialogComponent);
-    dialogRef.componentInstance.summer = "this has been changed"
+    dialogRef.componentInstance.headline = headline
+    dialogRef.componentInstance.checkMin = target_check_size_min
+    dialogRef.componentInstance.checkMax = target_check_size_max
+    dialogRef.componentInstance.trMin = target_revenue_min
+    dialogRef.componentInstance.trMax = target_revenue_max
+    dialogRef.componentInstance.ebiMin = target_ebitda_min
+    dialogRef.componentInstance.ebiMax = target_ebitda_max
   }
 
   addDialog() {

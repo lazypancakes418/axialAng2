@@ -1,0 +1,16 @@
+.headline {
+  width: 100%;
+}
+input[disabled] {
+  text-align: center;
+  float: right;
+}
+
+input{
+  text-align: center
+}
+
+::-webkit-input-placeholder{
+  text-align: center;
+  margin: 0 auto
+}

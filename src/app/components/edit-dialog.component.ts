@@ -7,16 +7,16 @@ import { Subscription } from 'rxjs/Subscription';
 @Component({
   selector: 'formDialog',
   templateUrl: '../templates/dialog.component.html',
-  providers: [EditFormService]
+   styleUrls: ['../styles/dialog.component.css']
 })
 
 export class EditDialogComponent {
-  summer: string = "i am edit"
-  subscription: Subscription;
-  constructor(public dialogRef: MdDialogRef<EditDialogComponent>
-    , private formService: EditFormService) {
-    this.subscription = formService.some.subscribe((str: string) => {
-      this.summer = str
-    })
-  }
+  headline: string;
+  checkMin: number;
+  checkMax: number;
+  trMin: number;
+  trMax: number;
+  ebiMin: number;
+  ebiMax: number;
+  constructor(public dialogRef: MdDialogRef<EditDialogComponent>) {}
 }
