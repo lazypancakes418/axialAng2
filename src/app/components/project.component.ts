@@ -1,24 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { MdDialog } from '@angular/material';
+import { Component, OnInit} from '@angular/core';
+import { MdDialog, MdDialogRef } from '@angular/material';
 
 import { Project } from '../services/project';
 import { ProjectsService } from '../services/projects.service';
+// import { EditFormService }  from '../services/edit-form.service';
 import { EditDialogComponent } from './edit-dialog.component';
 import { AddDialogComponent } from './add-dialog.component';
 
 @Component({
   selector: 'axial-projects',
   templateUrl: '../templates/project.component.html',
-  styleUrls: ['../styles/project.component.css']
+  styleUrls: ['../styles/project.component.css'],
 })
 
 
 export class ProjectsComponent implements OnInit {
+
   projects: Project[];
 
   constructor(
     private projService: ProjectsService,
-    public dialog: MdDialog
+    private formService: EditFormService,
+    public dialog: MdDialog,
   ) { }
 
   getProjects(): void {
@@ -32,11 +35,12 @@ export class ProjectsComponent implements OnInit {
   deleteProject(index: number): void {
     this.projService.deleteProject(index).then(projs => this.projects = projs)
   }
-   openDialog() {
+  openDialog() {
     let dialogRef = this.dialog.open(EditDialogComponent);
+    dialogRef.componentInstance.summer = "this has been changed"
   }
 
-   addDialog() {
+  addDialog() {
     let dialogRef = this.dialog.open(AddDialogComponent);
   }
 }

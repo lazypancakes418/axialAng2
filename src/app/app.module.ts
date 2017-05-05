@@ -9,6 +9,7 @@ import { ProjectsComponent } from './components/project.component';
 import { EditDialogComponent } from './components/edit-dialog.component';
 import { AddDialogComponent } from './components/add-dialog.component';
 import { ProjectsService } from './services/projects.service';
+import { EditFormService } from './services/edit-form.service';
 import { AppRoutingModule } from './routes/app-routing.module';
 import { MaterialModule } from './modules/material.module'
 @NgModule({
@@ -29,7 +30,7 @@ import { MaterialModule } from './modules/material.module'
     EditDialogComponent,
     AddDialogComponent,
   ],
-  providers: [ProjectsService],
+  providers: [ProjectsService, EditFormService],
   bootstrap: [AppComponent]
 })
 

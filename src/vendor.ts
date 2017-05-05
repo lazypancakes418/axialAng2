@@ -4,6 +4,6 @@ import '@angular/core';
 import '@angular/common';
 import '@angular/http';
 import '@angular/router';
-import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+import '@angular/material/prebuilt-themes/pink-bluegrey.css';
 // RxJS
 import 'rxjs';
