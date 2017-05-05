@@ -3,7 +3,10 @@
 }
 .card {
   width: 255px;
-  height: 85%
+  height: 85%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 .tile{
   height: 255px

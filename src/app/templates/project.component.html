@@ -1,6 +1,6 @@
 <button md-raised-button (click)="addDialog()">Click me!</button>
-<md-grid-list cols="6">
-  <md-grid-tile colspan="2" rowspan="2" *ngFor="let proj of projects; let i = index">
+<md-grid-list cols="8" [rowHeight]="400">
+  <md-grid-tile colspan="2"   *ngFor="let proj of projects; let i = index">
     <md-card class="card" >
   <md-card-header>
     <md-card-title>{{proj.headline}}</md-card-title>

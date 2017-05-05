@@ -58,5 +58,6 @@ export class ProjectsComponent implements OnInit {
 
   addDialog() {
     let dialogRef = this.dialog.open(AddDialogComponent);
+    dialogRef.afterClosed().subscribe(() => this.getProjects())
   }
 }
