@@ -35,23 +35,25 @@ export class ProjectsComponent implements OnInit {
   deleteProject(index: number): void {
     this.projService.deleteProject(index).then(projs => this.projects = projs)
   }
-  openDialog(proj: any) {
-    console.log(proj)
+  openDialog(proj: any, index: number) {
     let { headline,
       target_check_size_min,
       target_check_size_max,
       target_revenue_min,
       target_revenue_max,
       target_ebitda_min,
-      target_ebitda_max, } = proj
+      target_ebitda_max, } = proj;
     let dialogRef = this.dialog.open(EditDialogComponent);
-    dialogRef.componentInstance.headline = headline
-    dialogRef.componentInstance.checkMin = target_check_size_min
-    dialogRef.componentInstance.checkMax = target_check_size_max
-    dialogRef.componentInstance.trMin = target_revenue_min
-    dialogRef.componentInstance.trMax = target_revenue_max
-    dialogRef.componentInstance.ebiMin = target_ebitda_min
-    dialogRef.componentInstance.ebiMax = target_ebitda_max
+    dialogRef.componentInstance.headline = headline;
+    dialogRef.componentInstance.checkMin = target_check_size_min;
+    dialogRef.componentInstance.checkMax = target_check_size_max;
+    dialogRef.componentInstance.trMin = target_revenue_min;
+    dialogRef.componentInstance.trMax = target_revenue_max;
+    dialogRef.componentInstance.ebiMin = target_ebitda_min;
+    dialogRef.componentInstance.ebiMax = target_ebitda_max;
+    dialogRef.componentInstance.index = index;
+
+    dialogRef.afterClosed().subscribe(() => this.getProjects())
   }
 
   addDialog() {

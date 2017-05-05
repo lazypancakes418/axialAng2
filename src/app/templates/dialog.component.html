@@ -4,38 +4,38 @@
       <h2> Projects</h2>
     </md-card-title>
   </md-card-header>
+    <form novalidate [formGroup]="project" (ngSubmit)="onSubmit(project)">
   <md-card-content>
-    <form>
       <md-input-container class="headline">
-        <input mdInput placeholder="Headline" value="{{headline}}" />
+        <input mdInput placeholder="Headline" formControlName="headline"/>
       </md-input-container>
       <div>
         <md-input-container>
-          <input mdInput placeholder="Check Size Min" value="{{checkMin}}" />
+          <input mdInput placeholder="Check Size Min" formControlName="checkMin" />
         </md-input-container>
         <md-input-container>
-          <input mdInput placeholder="Check Size Max" value="{{checkMax}}" />
+          <input mdInput placeholder="Check Size Max" formControlName="checkMax" />
         </md-input-container>
       </div>
       <div>
         <md-input-container>
-          <input mdInput placeholder="Revenue Min" value="{{trMin}}" />
+          <input mdInput placeholder="Revenue Min" formControlName="trMin" />
         </md-input-container>
         <md-input-container>
-          <input mdInput placeholder="Revenue Max" value="{{trMax}}" />
+          <input mdInput placeholder="Revenue Max" formControlName="trMax" />
         </md-input-container>
       </div>
       <div>
         <md-input-container>
-          <input mdInput placeholder="EBITA Min" value="{{ebiMin}}" />
+          <input mdInput placeholder="EBITA Min" formControlName="ebiMin" />
         </md-input-container>
         <md-input-container>
-          <input mdInput placeholder="EBITA Max" value="{{ebiMax}}" />
+          <input mdInput placeholder="EBITA Max" formControlName="ebiMax" />
         </md-input-container>
       </div>
-    </form>
   </md-card-content>
   <md-card-actions>
-    <button md-raised-button (click)="openDialog(projects[i])" color="primary">Save</button>
+    <button md-raised-button type="submit"  color="primary">Save</button>
   </md-card-actions>
+   </form>
 </md-card>

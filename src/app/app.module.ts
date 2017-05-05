@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 
@@ -15,7 +15,7 @@ import { MaterialModule } from './modules/material.module'
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
@@ -26,7 +26,7 @@ import { MaterialModule } from './modules/material.module'
     EditDialogComponent,
     AddDialogComponent,
   ],
-   entryComponents: [
+  entryComponents: [
     EditDialogComponent,
     AddDialogComponent,
   ],

@@ -14,7 +14,7 @@
           <div class="list"><label>EBITDA Max: </label> <input type="" name="" disabled value="{{proj.target_ebitda_max | number}}"></div>
   </md-card-content>
   <md-card-actions>
-    <button md-raised-button (click)="openDialog(projects[i])"color="primary">Edit</button>
+    <button md-raised-button (click)="openDialog(projects[i], i)"color="primary">Edit</button>
     <button md-raised-button (click)="deleteProject(i)" color="warn">Delete</button>
   </md-card-actions>
 </md-card>

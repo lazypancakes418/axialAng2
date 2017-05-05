@@ -17,7 +17,7 @@ export class ProjectsService {
     return Promise.resolve(ADD(proj));
   }
 
-  editProject(index: number, proj: Project): Promise<Project[]> {
-    return Promise.resolve(EDIT(index, proj));
+  editProject(index: number, proj: Project): void {
+    EDIT(index, proj)
   }
 }
