@@ -40,7 +40,7 @@ export class EditDialogComponent implements OnInit {
       ebiMax: [this.ebiMax],
     })
   }
-
+  
   onSubmit({value, valid} : {value: Project, valid: boolean}): void {
     let proj = {
       headline: value.headline ,

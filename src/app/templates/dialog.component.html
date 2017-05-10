@@ -7,30 +7,30 @@
     <form novalidate [formGroup]="project" (ngSubmit)="onSubmit(project)">
   <md-card-content>
       <md-input-container class="headline">
-        <input mdInput placeholder="Headline" formControlName="headline"/>
+        <input  mdInput placeholder="Headline" formControlName="headline"/>
       </md-input-container>
       <div>
         <md-input-container>
-          <input mdInput placeholder="Check Size Min" formControlName="checkMin" />
+          <input mdInput convertor placeholder="Check Size Min" formControlName="checkMin" />
         </md-input-container>
         <md-input-container>
-          <input mdInput placeholder="Check Size Max" formControlName="checkMax" />
-        </md-input-container>
-      </div>
-      <div>
-        <md-input-container>
-          <input mdInput placeholder="Revenue Min" formControlName="trMin" />
-        </md-input-container>
-        <md-input-container>
-          <input mdInput placeholder="Revenue Max" formControlName="trMax" />
+          <input mdInput convertor placeholder="Check Size Max" formControlName="checkMax" />
         </md-input-container>
       </div>
       <div>
         <md-input-container>
-          <input mdInput placeholder="EBITA Min" formControlName="ebiMin" />
+          <input mdInput convertor placeholder="Revenue Min" formControlName="trMin" />
         </md-input-container>
         <md-input-container>
-          <input mdInput placeholder="EBITA Max" formControlName="ebiMax" />
+          <input mdInput convertor placeholder="Revenue Max" formControlName="trMax" />
+        </md-input-container>
+      </div>
+      <div>
+        <md-input-container>
+          <input mdInput convertor placeholder="EBITA Min" formControlName="ebiMin" />
+        </md-input-container>
+        <md-input-container>
+          <input mdInput convertor placeholder="EBITA Max" formControlName="ebiMax" />
         </md-input-container>
       </div>
   </md-card-content>

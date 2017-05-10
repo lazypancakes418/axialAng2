@@ -17,7 +17,6 @@ import { AddDialogComponent } from './add-dialog.component';
 export class ProjectsComponent implements OnInit {
 
   projects: Project[];
-
   constructor(
     private projService: ProjectsService,
     // private formService: EditFormService,

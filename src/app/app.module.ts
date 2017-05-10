@@ -11,7 +11,8 @@ import { AddDialogComponent } from './components/add-dialog.component';
 import { ProjectsService } from './services/projects.service';
 import { EditFormService } from './services/edit-form.service';
 import { AppRoutingModule } from './routes/app-routing.module';
-import { MaterialModule } from './modules/material.module'
+import { MaterialModule } from './modules/material.module';
+import { ConverterDirective } from './directives/shortcut.directive'
 @NgModule({
   imports: [
     BrowserModule,
@@ -25,6 +26,7 @@ import { MaterialModule } from './modules/material.module'
     ProjectsComponent,
     EditDialogComponent,
     AddDialogComponent,
+    ConverterDirective,
   ],
   entryComponents: [
     EditDialogComponent,
